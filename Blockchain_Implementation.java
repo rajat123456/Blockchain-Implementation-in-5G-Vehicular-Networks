@@ -46,15 +46,15 @@ class Block
 			MessageDigest md = MessageDigest.getInstance("SHA-256");	        
 			
 	 	    // Get our input in bytes
-			byte[] hash = md.digest(input.getBytes("UTF-8"));
+			byte[] hash_in_bytes = md.digest(input.getBytes("UTF-8"));
 			
 			// Representing our hash in hexidecimal
-			StringBuffer hash_in_hex = new StringBuffer(); 
+			StringBuilder hash_in_hex = new StringBuilder(); 
 		
-			for (int i = 0; i < hash.length; i++) 
+			for (int i = 0; i < hash_in_bytes.length; i++) 
 			{
 			    // This make sure our input is in Hex form only
-				String hex = Integer.toHexString(0xff & hash[i]);
+				String hex = Integer.toHexString(0xff & hash_in_bytes[i]);
 				hash_in_hex.append(hex);
 			}
 			

@@ -1,4 +1,4 @@
-// Basic Implementation of Blockchain in Java
+// Blockchain Implementation in Vehicular Networks
 
 // Imported date class so as to get timeStamp
 import java.util.Date;
